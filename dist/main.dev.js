@@ -15,11 +15,13 @@ function saveBookmark(e) {
 
   if (!siteUrl.match(regex)) {
     document.getElementsByClassName("bege")[1].style.border = "1px red solid";
-    document.getElementsByTagName("span")[0].style.visibility = "visible";
+    document.getElementsByTagName("span")[0].style.display = "inline";
+    var beep = new Audio("crash.mp3");
+    beep.play();
     return false;
   } else {
     document.getElementsByClassName("bege")[1].style.border = "";
-    document.getElementsByTagName("span")[0].style.visibility = "";
+    document.getElementsByTagName("span")[0].style.display = "";
   }
 
   if (localStorage.getItem("bookmarks") === null) {
@@ -33,6 +35,7 @@ function saveBookmark(e) {
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   }
 
+  form.reset();
   showBookmarks();
   e.preventDefault();
 }

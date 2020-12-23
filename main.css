@@ -4,7 +4,7 @@
 .bookMark{margin:20px auto;
     width:40%;
 }
-.bookMark h3{padding: 20px 0px;color:rgb(186, 181, 181);font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;border-bottom:1px solid rgb(220, 218, 218);
+.bookMark h3{padding: 20px 0px;color:rgb(157, 149, 149);font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;border-bottom:1px solid rgb(220, 218, 218);
 
 }
 .choose{margin:10px 0px;padding:30px;background:rgb(248, 248, 248);border-radius: 8px;
@@ -40,5 +40,5 @@
 .learn-delete{margin:0px 3px ;padding:10px;background:rgb(223, 41, 41);border-radius:3px;color:white;text-decoration: none;  
 }
 span{
-    color:orangered;font-size:14px;background:rgb(243, 215, 215);padding:9px;position:relative; left:74%;visibility:hidden;
+    color:orangered;font-size:14px;background:rgb(243, 215, 215);padding:9px;position:relative; bottom:2px; left:75%;display:none;
 }
