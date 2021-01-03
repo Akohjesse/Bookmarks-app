@@ -14,10 +14,10 @@ function saveBookmark(e) {
   var regex = new RegExp(expression);
 
   if (!siteUrl.match(regex)) {
-    document.getElementsByClassName("bege")[1].style.border = "1px red solid";
-    document.getElementsByTagName("span")[0].style.display = "inline";
     var beep = new Audio("crash.mp3");
     beep.play();
+    document.getElementsByClassName("bege")[1].style.border = "1px red solid";
+    document.getElementsByTagName("span")[0].style.display = "inline";
     return false;
   } else {
     document.getElementsByClassName("bege")[1].style.border = "";
@@ -67,6 +67,6 @@ function showBookmarks() {
   for (i = 0; i < bookmarks.length; i++) {
     var name = bookmarks[i].name;
     var url = String(bookmarks[i].Url);
-    bkmkResult.innerHTML += "<div class=\"learn\">\n                                       <h3>".concat(name, "</h3>\n                                       <div>\n                                         <a class=\"learn-btn\" target=\"_blank\" href=\"").concat(url, "\">Visit</a>\n                                         <a onClick=\"deleteBmk('").concat(url, "', '").concat(name, "')\" class=\"learn-delete\" target=\"\" href=\"#\">Delete</a>\n                                         </div>");
+    bkmkResult.innerHTML += "<div class=\"learn\">\n                                       <h3>".concat(name, "</h3>\n                                       <div>\n                                           <a class=\"learn-btn\" target=\"_blank\" href=\"").concat(url, "\">Visit</a>\n                                           <a onClick=\"deleteBmk('").concat(url, "', '").concat(name, "')\" class=\"learn-delete\" target=\"\" href=\"#\">Delete</a>\n                                     </div>\n                                 </div>     ");
   }
 }

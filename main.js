@@ -14,10 +14,11 @@ function saveBookmark(e){
    var regex = new RegExp(expression);
 
    if (!siteUrl.match(regex)){
+    var beep = new Audio ("crash.mp3");
+    beep.play();
       document.getElementsByClassName("bege")[1].style.border="1px red solid";
       document.getElementsByTagName("span")[0].style.display="inline";
-      var beep = new Audio ("crash.mp3");
-      beep.play();
+      
  
        return false;
    }
@@ -76,9 +77,10 @@ body.addEventListener("load", showBookmarks());
          bkmkResult.innerHTML += `<div class="learn">
                                        <h3>${name}</h3>
                                        <div>
-                                         <a class="learn-btn" target="_blank" href="${url}">Visit</a>
-                                         <a onClick="deleteBmk('${url}', '${name}')" class="learn-delete" target="" href="#">Delete</a>
-                                         </div>`;           
+                                           <a class="learn-btn" target="_blank" href="${url}">Visit</a>
+                                           <a onClick="deleteBmk('${url}', '${name}')" class="learn-delete" target="" href="#">Delete</a>
+                                     </div>
+                                 </div>     `;           
     
      }
    }
